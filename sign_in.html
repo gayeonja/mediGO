@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MediGO | Sign In</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="general.css">
+        <style>
+            body{
+                background-color: #1B1981;
+                font-family: 'Gibson', sans-serif; 
+            }
+            h2{
+                color: white; 
+                font-size: 70px;
+            }
+            .main{
+                padding-top: 5%;
+            }
+            #go{
+                padding-bottom: 2%;
+            }
+            .welcome{
+                text-align: center;
+                padding-top: 3%;
+            }
+            .image{
+                width: 60%; 
+            }
+            .log-in{
+                border-radius: 0%;
+                width: 150px; 
+                background-color: #1A16BE; 
+                border: none; 
+                border-color: #1A16BE; 
+                color: white; 
+                border-radius: 5px; 
+                font-size: 16px; 
+                padding-top: 7px; 
+                padding-bottom: 7px; 
+            }
+            .log-in:hover {
+                background-color: #ABCCA8; 
+                color: black;
+            }
+            .buttons{
+                margin-top: 5%; 
+            }
+            #sign-in{
+                background-color: white;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+            #i-am-new{
+                text-align: center;
+                font-size: 10px;
+            }
+            #sign-in-pls{
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container main">
+            <div class="row" id="go">
+                <a class="" href="index.html">
+                    <img src="img/go_white.png" height="50" alt="logo">
+                </a>
+            </div>
+            <div class="row">
+                <h2>Welcome back!</h2>
+            </div>
+            <div class="row">
+                <div class="col-6 welcome">
+                    <img src="img/default.png" class="image" alt="logo">
+                </div>
+                <div class="col-6">
+                    <div id="sign-in">
+                        <form id="signup-form" action="set_up_profile.html" method="GET">
+                            <div id="sign-in-pls">
+                                <p>Sign In</p>
+                            </div>
+                            <div class="inputs container">
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <small id="name-error" class="form-text text-danger text-center"></small>
+                                        <input type="text" name="name" class="form-control" placeholder="email/username" id="name">
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <small id="birthday-error" class="form-text text-danger"></small>
+                                        <input type="text" name="birthday" class="form-control" placeholder="password" id="birthday">
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                    
+                            </div>
+                            <div class="buttons form-group text-center row">
+                                <div class="col-sm-12">
+                                    <button type="submit" value="submit" class="log-in">Let's GO!</button>
+                                </div>
+                            </div> 
+                            <div id="i-am-new">
+                                <p>new around here? <a href="sign_up.html">sign up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

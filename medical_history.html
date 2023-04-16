@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MediGO | Medical History</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="general.css">
+        <style>
+            body{
+                background-color: #1B1981;
+                font-family: 'Gibson', sans-serif; 
+            }
+            h2{
+                color: white; 
+                font-size: 30px;
+            }
+            .main{
+                padding-top: 5%;
+            }
+            #go{
+                padding-bottom: 2%;
+                text-align: center;
+            }
+            .welcome{
+                text-align: center;
+                padding-top: 0%;
+            }
+            .image{
+                width: 60%; 
+            }
+            .log-in{
+                border-radius: 0%;
+                width: 150px; 
+                background-color: #1A16BE; 
+                border: none; 
+                border-color: #1A16BE; 
+                color: white; 
+                border-radius: 5px; 
+                font-size: 16px; 
+                padding-top: 7px; 
+                padding-bottom: 7px; 
+            }
+            .log-in:hover {
+                background-color: #ABCCA8; 
+                color: black;
+            }
+            .buttons{
+                margin-top: 5%; 
+            }
+            #sign-in{
+                margin-top: 12%; 
+                background-color: white;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                margin-bottom: 15%; 
+                box-shadow: 5px 10px;
+                border-radius: 20px; 
+            }
+            #i-am-new{
+                text-align: center;
+                font-size: 10px;
+            }
+            #sign-in-pls{
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .center{
+                text-align: center;
+            }
+            .smalls{
+                font-size: 12px;
+            }
+            #lower_text{
+                padding-top: 6%; 
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+            .line{
+                padding-top: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container main">
+            <div class="row">
+                <div class="container" id="go">
+                    <a class="" href="index.html">
+                        <img src="img/go_white.png" height="50" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <h2 class="center">Hello _____! Thank you for choosing mediGO</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 welcome">
+                    <img src="img/profile_phone.png" class="image" alt="logo">
+                </div>
+                <div class="col-6">
+                    <div id="sign-in">
+                        <form id="signup-form" action="done.html" method="GET">
+                            <div id="sign-in-pls">
+                                <p>B. Medical History</p>
+                            </div>
+                            <div class="center smalls">
+                                <p>Please fill in the blanks below.</p>
+                            </div>
+                            <div class="inputs container">
+                                <div class="row line">
+                                    <div class="col-1"></div>
+                                    <div class="col-10"><p>Patient Notes: </p></div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <textarea id="message" rows="3" class="form-control"></textarea>
+                                        <small id="message-error" class="form-text text-danger"></small> 
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                <div class="row line">
+                                    <div class="col-1"></div>
+                                    <div class="col-10"><p>Health Conditions: </p></div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <textarea id="message" rows="2" class="form-control"></textarea>
+                                        <small id="message-error" class="form-text text-danger"></small> 
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                <div class="row line">
+                                    <div class="col-1"></div>
+                                    <div class="col-10"><p>Allergies: </p></div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <textarea id="message" rows="3" class="form-control"></textarea>
+                                        <small id="message-error" class="form-text text-danger"></small> 
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="center smalls" id="lower_text">
+                                    <p>this is the information that will be abailable to anyone given permission to access your profile</p>
+                                </div>
+                            </div>
+                            <div class="buttons form-group text-center row">
+                                <div class="col-sm-12">
+                                    <button type="submit" value="submit" class="log-in">Next</button>
+                                </div>
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

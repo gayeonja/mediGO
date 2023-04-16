@@ -1,0 +1,15 @@
+body{
+    font-family: 'Gibson', sans-serif; 
+}
+.navbarButton{
+    font-size: 15px; 
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.navbarIcon{
+    height: 2%; 
+    width: auto;  
+}
+.icon{
+    margin-right: 4px; 
+}

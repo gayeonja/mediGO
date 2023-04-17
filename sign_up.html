@@ -35,10 +35,10 @@
                 border: none; 
                 border-color: #1A16BE; 
                 color: white; 
-                border-radius: 5px; 
                 font-size: 16px; 
                 padding-top: 7px; 
                 padding-bottom: 7px; 
+                border-radius: 10px; 
             }
             .log-in:hover {
                 background-color: #ABCCA8; 
@@ -53,6 +53,7 @@
                 margin-right: 10%;
                 padding-top: 5%;
                 padding-bottom: 5%;
+                border-radius: 10px; 
             }
             #i-am-new{
                 text-align: center;
@@ -86,11 +87,12 @@
                                 <p>Sign Up</p>
                             </div>
                             <div class="inputs container">
+
                                 <div class="row">
                                     <div class="col-1"></div>
                                     <div class="col-10">
                                         <small id="name-error" class="form-text text-danger text-center"></small>
-                                        <input type="text" name="name" class="form-control" placeholder="email" id="name">
+                                        <input type="text" name="name" class="form-control" placeholder="first and last name" id="name">
                                     </div>
                                     <div class="col-1"></div>
                                 </div>
@@ -98,8 +100,17 @@
                                 <div class="row">
                                     <div class="col-1"></div>
                                     <div class="col-10">
-                                        <small id="name-error" class="form-text text-danger text-center"></small>
-                                        <input type="text" name="name" class="form-control" placeholder="username" id="name">
+                                        <small id="email-error" class="form-text text-danger text-center"></small>
+                                        <input type="text" name="email" class="form-control" placeholder="email" id="name">
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <small id="username-error" class="form-text text-danger text-center"></small>
+                                        <input type="text" name="username" class="form-control" placeholder="username" id="username">
                                     </div>
                                     <div class="col-1"></div>
                                 </div>
@@ -128,5 +139,37 @@
             </div>
         </div>
         
+        <script type="text/javascript">
+            document.querySelector("#signup-form").onsubmit = function() {
+
+                let validForm = true;
+
+                const name = document.querySelector("#name").value.trim();
+                const username = document.querySelector("#username").value.trim();
+                const email = document.querySelector("#email").value.trim();
+                const password = document.querySelector("#password").value.trim();
+
+                localStorage.setItem('name', name);
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', password);
+
+                if ( password.length < 9 || password.length > 15 ){
+                    validForm = false;
+                    document.querySelector("#password-error").innerHTML = `Your password must be between 9 to 15 characters.`;
+                }
+                if ( email.length == 0 ){
+                    validForm = false;
+                    document.querySelector("#email-error").innerHTML = `You must provide an email.`;
+                }
+                else if (email.indexOf('@') == -1) {
+                    validForm = false;
+                    document.querySelector("#email-error").innerHTML = `Enter a valid email.`;
+                }
+
+                return validForm; 
+            }
+        </script>
+
     </body>
 </html>
